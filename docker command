@@ -1,0 +1,42 @@
+Basic:	
+	> docker version
+	> docker -v
+	> docker info
+	> docker --help
+	> docker login
+Images
+	> docker images
+		> docker images -q (only image ids)
+	> docker pull ......
+	> docker rmi .... (for remove image by id)
+
+Containers
+	> docker ps
+	> docker run
+		> docker run -it ..... (enter in container)
+	> docker start
+	> docker stop
+
+System
+	> docker stats
+	> docker system df
+	> docker system prune
+
+#### Dockerfile build command
+
+	> mkdir FolderName
+	> touch FileName
+	> vim FileName
+		{
+			From ImageName (like: ubuntu)
+			MAINTAINER shawkat ali <shawkatali527@gmail.com>
+			RUN apt-get update
+			CMD ["echo", "Hello world...! from my first docker image"]
+		}
+
+	> cat FileName
+	> docker build . 
+	or 
+	> docker build -t myimage1:1.0
+	> docker images
+	> docker run <Image ID>

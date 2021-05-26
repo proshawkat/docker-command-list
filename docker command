@@ -40,3 +40,29 @@ System
 	> docker build -t myimage1:1.0
 	> docker images
 	> docker run <Image ID>
+
+#### Docker composer 
+	> Docker-compose -v
+	
+	If not install
+		> pip install -U docker-compose
+
+	> mkdir DockerComposer
+	> cd DockerComposer
+	> touch docker-compose.yml
+	> vi docker-compose.yml
+
+		version: '3.0'
+
+		services:
+
+		  web:
+		    image: nginx
+
+		  database:
+		    image: redis
+	> cat docker-compose.yml
+	> docker-compose config
+	> docker-compose up -d
+	> docker ps
+	> dockerc-compose down
